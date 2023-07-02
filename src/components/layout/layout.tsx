@@ -16,7 +16,7 @@ const appTheme = createTheme({
       main: "#1f265d",
     },
     secondary: {
-      main: "#561f5d",
+      main: "#fddf03",
     },
   },
 });

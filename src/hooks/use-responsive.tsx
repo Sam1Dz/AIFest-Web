@@ -23,11 +23,16 @@ const useCheckMobileScreen = () => {
     }
   }, [initialRender]);
 
+  // console.log(`height: ${height}`);
+  // console.log(`width: ${width}`);
+
   return {
+    width,
+    height,
     isMobile: width < 900,
     isScreenHeightUnder375: height < 375,
     isScreenWidthHeightUnder375: width < 375 || height < 375,
-    isScreenWidthHeightUnder600: width < 900 && height < 900,
+    isScreenWidthHeightUnder900: width < 900 && height < 900,
   };
 };
 

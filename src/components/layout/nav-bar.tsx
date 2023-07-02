@@ -24,11 +24,6 @@ import RateReviewIcon from "@mui/icons-material/RateReview";
 const NavMenu = () => {
   return [
     {
-      title: "Tiket",
-      link: "/ticket",
-      icon: <LocalActivityIcon />,
-    },
-    {
       title: "Hubungi Kami",
       link: "/contact",
       icon: <RateReviewIcon />,
@@ -64,10 +59,7 @@ function NavBar() {
     <Box>
       <AppBar
         position="fixed"
-        sx={{
-          backgroundColor: "white",
-          zIndex: (theme) => theme.zIndex.drawer + 1,
-        }}
+        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
         {...AppBarExtendProps}
       >
         <Box component="nav">
@@ -84,7 +76,7 @@ function NavBar() {
                 >
                   <Image
                     style={{ objectFit: "contain" }}
-                    src="/images/site/aif-logo.png"
+                    src="/images/site/aif-logo-white.png"
                     alt="AIF Logo"
                     sizes="(max-width: 899px) 70px, 140px"
                     priority
@@ -96,17 +88,30 @@ function NavBar() {
               <Box sx={{ display: { xs: "none", md: "initial" } }}>
                 {NavMenu().map((el, i) => {
                   return (
-                    <Button key={i} size="large">
+                    <Button
+                      key={i}
+                      size="large"
+                      sx={{ color: "rgb(255, 255, 255)" }}
+                    >
                       {el.title}
                     </Button>
                   );
                 })}
+                <Button
+                  size="large"
+                  color="secondary"
+                  variant="contained"
+                  sx={{ ml: 1, color: "rgb(0, 0, 0)" }}
+                >
+                  TIKET
+                </Button>
               </Box>
               <Box sx={{ display: { xs: "initial", md: "none" } }}>
                 <IconButton
                   size="large"
                   aria-label="menu"
                   onClick={toggleDrawer(!openDrawer)}
+                  sx={{ color: "rgb(255, 255, 255)" }}
                 >
                   <MenuIcon />
                 </IconButton>
@@ -130,7 +135,13 @@ function NavBar() {
           },
         }}
       >
-        <Container maxWidth="lg">
+        <Container
+          maxWidth="lg"
+          sx={{
+            backgroundColor: (theme) => theme.palette.primary.main,
+            color: "rgb(255, 255, 255)",
+          }}
+        >
           <Box
             role="presentation"
             onClick={toggleDrawer(false)}
@@ -141,12 +152,24 @@ function NavBar() {
                 return (
                   <ListItem key={el.title} sx={{ px: 0 }}>
                     <ListItemButton>
-                      <ListItemIcon>{el.icon}</ListItemIcon>
+                      <ListItemIcon sx={{ color: "rgb(255, 255, 255)" }}>
+                        {el.icon}
+                      </ListItemIcon>
                       <ListItemText primary={el.title} />
                     </ListItemButton>
                   </ListItem>
                 );
               })}
+              <ListItem sx={{ px: 0 }}>
+                <Button
+                  size="large"
+                  color="secondary"
+                  variant="contained"
+                  sx={{ ml: 1, color: "rgb(0, 0, 0)", width: "100%" }}
+                >
+                  TIKET
+                </Button>
+              </ListItem>
             </List>
           </Box>
         </Container>

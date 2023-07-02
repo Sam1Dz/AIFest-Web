@@ -1,4 +1,5 @@
 import React from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 import Layout from "@/components/layout/layout";
 
@@ -15,6 +16,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Component {...pageProps} />
+      <Analytics />
     </Layout>
   );
 }
