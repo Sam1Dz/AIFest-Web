@@ -1,6 +1,11 @@
 import React from "react";
 import Head from "next/head";
-import { Box, Typography } from "@mui/material";
+
+/* MATERIAL UI | COMPONENTS */
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+
+// import { ElfsightWidget } from "react-elfsight-widget";
 
 import Hero from "@/components/pages/home/hero";
 
@@ -13,9 +18,17 @@ function Home() {
           name="description"
           content="Selamat datang di Website Resmi AIF - Anime Indonesia Festival. Anime Indonesia Festival adalah Event Anime yang diselenggarakan di Indonesia"
         />
+
+        <meta property="og:image" content="/images/site/aif-logo-round.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:image:src"
+          content="/images/site/aif-logo-round.jpg"
+        />
       </Head>
 
       <Hero />
+      {/* <ElfsightWidget widgetId="dedc9d3a-44f9-4bc2-a1f0-4e9b621e0515" /> */}
       <Box
         component="div"
         sx={{
