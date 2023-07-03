@@ -1,6 +1,6 @@
 {
   "name": "aifest-web",
-  "version": "2023.0.4",
+  "version": "2023.0.5",
   "private": true,
   "scripts": {
     "dev": "next dev",

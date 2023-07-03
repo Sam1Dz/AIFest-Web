@@ -31,8 +31,8 @@ const useCheckMobileScreen = () => {
     height,
     isMobile: width < 900,
     isScreenHeightUnder375: height < 375,
-    isScreenWidthHeightUnder375: width < 375 || height < 375,
-    isScreenWidthHeightUnder900: width < 900 && height < 900,
+    isScreenWidthOrHeightUnder375: width < 375 || height < 375,
+    isScreenWidthAndHeightUnder900: width < 900 && height < 900,
   };
 };
 

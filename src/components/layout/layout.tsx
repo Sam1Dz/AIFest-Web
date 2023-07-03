@@ -29,7 +29,7 @@ function Layout(props: ILayout) {
       <CssBaseline />
       <NavBar />
 
-      <Box component="main" sx={{ pt: 7 }}>
+      <Box component="main" sx={{ pt: { xs: 7, sm: 8 } }}>
         {children}
       </Box>
       <Footer />

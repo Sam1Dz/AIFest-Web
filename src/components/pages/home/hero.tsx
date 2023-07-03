@@ -13,8 +13,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import useResponsive from "@/hooks/use-responsive";
 
 function Hero() {
-  const { width, isScreenHeightUnder375, isScreenWidthHeightUnder375 } =
-    useResponsive();
+  const { width, height, isScreenHeightUnder375 } = useResponsive();
 
   return (
     <React.Fragment>
@@ -43,6 +42,7 @@ function Hero() {
             alt="Hero Background"
             priority
             style={{ objectFit: "cover", zIndex: -1 }}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </Box>
 
@@ -70,10 +70,12 @@ function Hero() {
               }}
             >
               <Image
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 src="/images/site/mascot.png"
                 alt="Hero Background"
                 style={{ transform: "scaleX(-1)" }}
                 fill
+                priority
               />
             </Box>
           </Box>
@@ -119,8 +121,9 @@ function Hero() {
                   }}
                 >
                   <Image
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     style={{ objectFit: "contain" }}
-                    src="/images/site/aif-logo-2023-navy.png"
+                    src="/images/site/aif-logo-bandung-2023-navy.png"
                     alt="AIF Logo"
                     priority
                     fill
@@ -163,7 +166,7 @@ function Hero() {
                     GRHA EMERAL - PADASUKA
                   </Typography>
                   <Typography
-                    component="body"
+                    component="p"
                     variant="body2"
                     color="primary"
                     sx={{ backgroundColor: "unset" }}
@@ -197,16 +200,25 @@ function Hero() {
             <Box
               component="div"
               sx={{
-                position: "relative",
-                width: isScreenWidthHeightUnder375 ? 210 : { xs: 316, md: 421 },
-                height: isScreenWidthHeightUnder375 ? 65 : { xs: 97, md: 130 },
+                width:
+                  width < 300 || height < 300
+                    ? 246
+                    : height > 999 || height > 999
+                    ? 526
+                    : { xs: 386, md: 421 },
+                height:
+                  width < 300 || height < 300
+                    ? 74
+                    : height > 999 || height > 999
+                    ? 162
+                    : { xs: 119, md: 130 },
                 m: "auto",
-                mb: 4,
               }}
             >
               <Image
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 style={{ objectFit: "contain" }}
-                src="/images/site/aif-logo-2023-navy.png"
+                src="/images/site/aif-logo-bandung-2023-navy.png"
                 alt="AIF Logo"
                 priority
                 fill
@@ -221,7 +233,7 @@ function Hero() {
           p: 3,
           width: "100%",
           backgroundColor: (theme) => theme.palette.secondary.main,
-          display: { md: "none", xs: "inherit" },
+          display: width < 1000 ? "inherit" : { md: "none", xs: "inherit" },
         }}
       >
         <Box
@@ -249,7 +261,7 @@ function Hero() {
             GRHA EMERAL - PADASUKA
           </Typography>
           <Typography
-            component="body"
+            component="p"
             variant="body2"
             color="primary"
             sx={{ backgroundColor: "unset" }}
