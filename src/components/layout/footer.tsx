@@ -12,6 +12,9 @@ import SvgIcon from "@mui/material/SvgIcon";
 import { visuallyHidden } from "@mui/utils";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 function Copyright() {
@@ -49,15 +52,42 @@ function Social() {
           </Box>
         </IconButton>
       </Link>
-      <Link href="https://wa.me/081214540605" target="_blank">
+      <Link
+        href="https://www.facebook.com/animeindonesiafestival"
+        target="_blank"
+      >
         <IconButton
-          aria-label="whatsapp"
+          aria-label="facebook"
           size="large"
           sx={{ color: "rgba(255, 255, 255, 0.6)" }}
         >
-          <WhatsAppIcon />
+          <FacebookIcon />
           <Box component="span" sx={visuallyHidden}>
-            Whatsapp Contact Person Link
+            Facebook Link
+          </Box>
+        </IconButton>
+      </Link>
+      <Link href="https://twitter.com/aifest_id" target="_blank">
+        <IconButton
+          aria-label="twitter"
+          size="large"
+          sx={{ color: "rgba(255, 255, 255, 0.6)" }}
+        >
+          <TwitterIcon />
+          <Box component="span" sx={visuallyHidden}>
+            Twitter Link
+          </Box>
+        </IconButton>
+      </Link>
+      <Link href="https://youtube.com/animeindonesiatv" target="_blank">
+        <IconButton
+          aria-label="youtube"
+          size="large"
+          sx={{ color: "rgba(255, 255, 255, 0.6)" }}
+        >
+          <YouTubeIcon />
+          <Box component="span" sx={visuallyHidden}>
+            Youtube Link
           </Box>
         </IconButton>
       </Link>
@@ -72,6 +102,18 @@ function Social() {
           </SvgIcon>
           <Box component="span" sx={visuallyHidden}>
             Discord Server Link
+          </Box>
+        </IconButton>
+      </Link>
+      <Link href="https://wa.me/+6281214540605" target="_blank">
+        <IconButton
+          aria-label="whatsapp"
+          size="large"
+          sx={{ color: "rgba(255, 255, 255, 0.6)" }}
+        >
+          <WhatsAppIcon />
+          <Box component="span" sx={visuallyHidden}>
+            Whatsapp Contact Person Link
           </Box>
         </IconButton>
       </Link>

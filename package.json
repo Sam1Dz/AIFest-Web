@@ -1,6 +1,6 @@
 {
   "name": "aifest-web",
-  "version": "2023.0.6",
+  "version": "2023.0.8",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@fontsource-variable/montserrat": "^5.0.5",
     "@fontsource/roboto": "^4.5.8",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.1",

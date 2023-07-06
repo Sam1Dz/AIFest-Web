@@ -5,6 +5,7 @@ import Layout from "@/components/layout/layout";
 
 import "@/styles/global.css";
 
+import "@fontsource-variable/montserrat";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";

@@ -10,6 +10,19 @@ interface ILayout {
 }
 
 const appTheme = createTheme({
+  typography: {
+    fontFamily: [
+      "montserrat",
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+    ].join(","),
+    fontWeightBold: 800,
+    fontWeightLight: 800,
+    fontWeightRegular: 800,
+    fontWeightMedium: 800,
+  },
   palette: {
     mode: "light",
     primary: {

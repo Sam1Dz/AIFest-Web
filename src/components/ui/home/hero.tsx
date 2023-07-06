@@ -157,12 +157,7 @@ function Hero() {
                     color="primary"
                     sx={{ mb: 1 }}
                   />
-                  <Typography
-                    component="h1"
-                    variant="h4"
-                    color="primary"
-                    sx={{ fontWeight: 700 }}
-                  >
+                  <Typography component="h1" variant="h4" color="primary">
                     GRHA EMERAL - PADASUKA
                   </Typography>
                   <Typography
@@ -252,12 +247,7 @@ function Hero() {
             color="primary"
             sx={{ mb: 1 }}
           />
-          <Typography
-            component="h1"
-            variant="h5"
-            color="primary"
-            sx={{ fontWeight: 700 }}
-          >
+          <Typography component="h1" variant="h5" color="primary">
             GRHA EMERAL - PADASUKA
           </Typography>
           <Typography
